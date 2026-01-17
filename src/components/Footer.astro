@@ -1,0 +1,47 @@
+---
+const base = import.meta.env.BASE_URL;
+const quickLinks = [
+  { label: "About", href: `${base}about` },
+  { label: "Programmes", href: `${base}programs` },
+  { label: "Impact", href: `${base}impact` },
+  { label: "Get Involved", href: `${base}get-involved` },
+  { label: "Contact", href: `${base}contact` },
+  { label: "Privacy", href: `${base}privacy` },
+];
+---
+<footer>
+  <div class="container footer-grid">
+    <div>
+      <h3>Oncendayo: Help Has Come</h3>
+      <p>Registration number: 2024/575141/08</p>
+      <p>Faith-rooted, community-driven support for vulnerable families in Gauteng.</p>
+    </div>
+    <div>
+      <h4>Quick Links</h4>
+      <ul style="list-style:none;padding:0;margin:0;display:grid;gap:0.5rem;">
+        {quickLinks.map((link) => (
+          <li>
+            <a href={link.href}>{link.label}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>Naomi: <a href="tel:+27605422007">060 542 2007</a></p>
+      <p>Naledi: <a href="tel:+27842872520">084 287 2520</a></p>
+      <p>
+        <a href="mailto:info@oncendayo.co.za">info@oncendayo.co.za</a>
+      </p>
+      <p>
+        <a href="mailto:secretary@oncendayo.co.za">secretary@oncendayo.co.za</a>
+      </p>
+    </div>
+  </div>
+  <div class="container" style="margin-top:2rem;border-top:1px solid rgba(255,255,255,0.2);padding-top:1.5rem;">
+    <p style="margin:0;font-size:0.9rem;">
+      © 2024 Oncendayo: Help Has Come. Built by
+      <a href="https://oncloud.africa" rel="noopener noreferrer" target="_blank">OnCloud Africa</a>.
+    </p>
+  </div>
+</footer>

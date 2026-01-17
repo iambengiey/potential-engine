@@ -1,0 +1,45 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ImpactStats from "../components/ImpactStats.astro";
+import Timeline from "../components/Timeline.astro";
+---
+<BaseLayout
+  title="Impact | Oncendayo: Help Has Come"
+  description="See Oncendayo's impact timeline, community reach, and honest funding needs."
+>
+  <section class="section">
+    <div class="container grid grid-2">
+      <div>
+        <span class="badge">Impact</span>
+        <h1>Measured and transparent</h1>
+        <p>
+          We keep our community informed with clear milestones, honest updates, and measurable
+          outcomes from the resources we have.
+        </p>
+        <ImpactStats />
+      </div>
+      <div class="card">
+        <h2>Communities served</h2>
+        <ul>
+          <li>Tembisa</li>
+          <li>Alexandra (“Alex”)</li>
+          <li>Gauteng Province (general outreach)</li>
+        </ul>
+        <div class="notice" style="margin-top:1.5rem;">
+          <strong>Funding gap note:</strong>
+          <p style="margin:0.5rem 0 0;">
+            2024 saw no initiatives due to limited funding and sponsorship, guiding our focus
+            toward sustainable partnerships.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container">
+      <h2>Impact timeline</h2>
+      <Timeline />
+    </div>
+  </section>
+</BaseLayout>

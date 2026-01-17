@@ -1,0 +1,42 @@
+---
+const base = import.meta.env.BASE_URL;
+const { pathname } = Astro.url;
+const normalizedPath = pathname.startsWith(base)
+  ? `/${pathname.slice(base.length)}`
+  : pathname;
+
+const navItems = [
+  { label: "Home", href: `${base}` },
+  { label: "About", href: `${base}about` },
+  { label: "Programmes", href: `${base}programs` },
+  { label: "Impact", href: `${base}impact` },
+  { label: "Get Involved", href: `${base}get-involved` },
+  { label: "Contact", href: `${base}contact` },
+];
+
+const toRelativePath = (href) => (href === base ? "/" : `/${href.replace(base, "").replace(/\/$/, "")}`);
+
+const isActive = (href) => {
+  const relativeHref = toRelativePath(href);
+  if (relativeHref === "/") {
+    return normalizedPath === "/" || normalizedPath === "";
+  }
+  return normalizedPath.startsWith(relativeHref);
+};
+---
+<header class="site-header">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;padding:1rem 0;gap:1rem;">
+    <a href={`${base}`} style="font-weight:700;color:var(--color-primary-teal);">
+      Oncendayo: Help Has Come
+    </a>
+    <nav aria-label="Primary">
+      <div class="nav-links">
+        {navItems.map((item) => (
+          <a class={isActive(item.href) ? "active" : ""} href={item.href}>
+            {item.label}
+          </a>
+        ))}
+      </div>
+    </nav>
+  </div>
+</header>
