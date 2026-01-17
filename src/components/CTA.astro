@@ -1,0 +1,15 @@
+---
+const base = import.meta.env.BASE_URL;
+const { title, description } = Astro.props;
+---
+<section class="section section-soft">
+  <div class="container card" style="display:grid;gap:1rem;">
+    <h2>{title}</h2>
+    <p>{description}</p>
+    <div style="display:flex;flex-wrap:wrap;gap:0.75rem;">
+      <a class="btn btn-primary" href={`${base}get-involved`}>Donate</a>
+      <a class="btn btn-secondary" href={`${base}get-involved`}>Volunteer</a>
+      <a class="btn btn-outline" href={`${base}get-involved`}>Partner</a>
+    </div>
+  </div>
+</section>

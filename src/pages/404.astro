@@ -1,0 +1,16 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const base = import.meta.env.BASE_URL;
+---
+<BaseLayout
+  title="Page Not Found | Oncendayo: Help Has Come"
+  description="The page you are looking for cannot be found on the Oncendayo site."
+>
+  <section class="section">
+    <div class="container" style="text-align:center;">
+      <h1>Page not found</h1>
+      <p>We could not find the page you were looking for.</p>
+      <a class="btn btn-primary" href={`${base}`}>Return to home</a>
+    </div>
+  </section>
+</BaseLayout>
