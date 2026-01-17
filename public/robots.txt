@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://oncendayo.org.za/sitemap.xml
+Sitemap: https://www.oncendayo.org.za/sitemap.xml

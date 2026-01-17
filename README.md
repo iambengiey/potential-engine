@@ -23,4 +23,4 @@ The production-ready files are generated in the `dist/` directory.
 - This repository uses the official GitHub Pages workflow to build and deploy on pushes to the `main` branch.
 - The Astro config includes the required `site` and `base` settings for a Project Pages deployment.
 
-**GitHub Pages URL:** https://iambengiey.github.io/potential-engine/
+**Website URL:** https://www.oncendayo.org.za/
