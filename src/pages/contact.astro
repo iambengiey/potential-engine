@@ -1,0 +1,48 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout
+  title="Contact | ONCENDAYO: Help Has Come"
+  description="Get in touch with ONCENDAYO for community support, partnerships, or volunteering."
+>
+  <section class="section">
+    <div class="container grid grid-2">
+      <div>
+        <span class="badge">Contact</span>
+        <h1>We are here to listen</h1>
+        <p>
+          Reach out for support, collaboration, or to learn more about ONCENDAYO's programmes.
+        </p>
+        <div class="card" style="margin-top:1.5rem;">
+          <h2>Contact details</h2>
+          <p>Naomi: <a href="tel:+27605422007">060 542 2007</a></p>
+          <p>Naledi: <a href="tel:+27842872520">084 287 2520</a></p>
+          <p><a href="mailto:info@oncendayo.co.za">info@oncendayo.co.za</a></p>
+          <p><a href="mailto:secretary@oncendayo.co.za">secretary@oncendayo.co.za</a></p>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Send a message</h2>
+        <form action="mailto:info@oncendayo.co.za" method="post" enctype="text/plain">
+          <div>
+            <label for="contact-name">Full name</label>
+            <input id="contact-name" name="name" type="text" required />
+          </div>
+          <div>
+            <label for="contact-email">Email address</label>
+            <input id="contact-email" name="email" type="email" required />
+          </div>
+          <div>
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" placeholder="How can we help?"></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Send message</button>
+          <p style="font-size:0.9rem;">
+            If the form does not open your email client, email
+            <a href="mailto:info@oncendayo.co.za">info@oncendayo.co.za</a> directly.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
