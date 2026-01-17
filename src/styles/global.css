@@ -256,11 +256,42 @@ footer .footer-grid {
 }
 
 @media (max-width: 720px) {
+  header.site-header .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   .hero-card {
     grid-template-columns: 1fr;
   }
 
   nav .nav-links {
     gap: 0.5rem;
+  }
+
+  nav .nav-links a {
+    padding: 0.35rem 0.6rem;
+  }
+
+  .section {
+    padding: 3.5rem 0;
+  }
+
+  .card {
+    padding: 1.4rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .container {
+    width: min(100% - 2rem, var(--max-width));
+  }
+
+  .hero {
+    padding: 4rem 0 3rem;
+  }
+
+  footer .footer-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   }
 }
