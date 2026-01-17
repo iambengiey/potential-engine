@@ -17,13 +17,19 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <h2>Contact details</h2>
           <p>Naomi: <a href="tel:+27605422007">060 542 2007</a></p>
           <p>Naledi: <a href="tel:+27842872520">084 287 2520</a></p>
-          <p><a href="mailto:info@oncendayo.co.za">info@oncendayo.co.za</a></p>
-          <p><a href="mailto:secretary@oncendayo.co.za">secretary@oncendayo.co.za</a></p>
+          <p><span data-email-user="info" data-email-domain="oncendayo.co.za"></span></p>
+          <p><span data-email-user="secretary" data-email-domain="oncendayo.co.za"></span></p>
         </div>
       </div>
       <div class="card">
         <h2>Send a message</h2>
-        <form action="mailto:info@oncendayo.co.za" method="post" enctype="text/plain">
+        <form
+          action="#"
+          method="post"
+          enctype="text/plain"
+          data-mailto-user="info"
+          data-mailto-domain="oncendayo.co.za"
+        >
           <div>
             <label for="contact-name">Full name</label>
             <input id="contact-name" name="name" type="text" required />
@@ -39,7 +45,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <button class="btn btn-primary" type="submit">Send message</button>
           <p style="font-size:0.9rem;">
             If the form does not open your email client, email
-            <a href="mailto:info@oncendayo.co.za">info@oncendayo.co.za</a> directly.
+            <span data-email-user="info" data-email-domain="oncendayo.co.za"></span> directly.
           </p>
         </form>
       </div>

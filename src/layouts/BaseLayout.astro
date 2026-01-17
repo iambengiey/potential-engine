@@ -32,5 +32,31 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
       <slot />
     </main>
     <Footer />
+    <script>
+      const emailNodes = document.querySelectorAll("[data-email-user][data-email-domain]");
+      emailNodes.forEach((node) => {
+        const user = node.getAttribute("data-email-user");
+        const domain = node.getAttribute("data-email-domain");
+        const subject = node.getAttribute("data-email-subject");
+        const address = `${user}@${domain}`;
+        const href = subject
+          ? `mailto:${address}?subject=${encodeURIComponent(subject)}`
+          : `mailto:${address}`;
+        const link = document.createElement("a");
+        link.href = href;
+        link.textContent = address;
+        if (node.dataset.emailLabel) {
+          link.textContent = node.dataset.emailLabel;
+        }
+        node.replaceWith(link);
+      });
+
+      const mailtoForms = document.querySelectorAll("form[data-mailto-user][data-mailto-domain]");
+      mailtoForms.forEach((form) => {
+        const user = form.getAttribute("data-mailto-user");
+        const domain = form.getAttribute("data-mailto-domain");
+        form.setAttribute("action", `mailto:${user}@${domain}`);
+      });
+    </script>
   </body>
 </html>
