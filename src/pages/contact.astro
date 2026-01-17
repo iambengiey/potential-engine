@@ -1,0 +1,54 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout
+  title="Contact | Oncendayo: Help Has Come"
+  description="Get in touch with Oncendayo for community support, partnerships, or volunteering."
+>
+  <section class="section">
+    <div class="container grid grid-2">
+      <div>
+        <span class="badge">Contact</span>
+        <h1>We are here to listen</h1>
+        <p>
+          Reach out for support, collaboration, or to learn more about Oncendayo's programmes.
+        </p>
+        <div class="card" style="margin-top:1.5rem;">
+          <h2>Contact details</h2>
+          <p>Naomi: <a href="tel:+27738600328">073 860 0328</a></p>
+          <p>Naledi: <a href="tel:+27842872520">084 287 2520</a></p>
+          <p><span data-email-user="info" data-email-domain="oncendayo.co.za"></span></p>
+          <p><span data-email-user="secretary" data-email-domain="oncendayo.co.za"></span></p>
+        </div>
+      </div>
+      <div class="card">
+        <h2>Send a message</h2>
+        <form
+          action="#"
+          method="post"
+          enctype="text/plain"
+          data-mailto-user="info"
+          data-mailto-domain="oncendayo.co.za"
+        >
+          <div>
+            <label for="contact-name">Full name</label>
+            <input id="contact-name" name="name" type="text" required />
+          </div>
+          <div>
+            <label for="contact-email">Email address</label>
+            <input id="contact-email" name="email" type="email" required />
+          </div>
+          <div>
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" placeholder="How can we help?"></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Send message</button>
+          <p style="font-size:0.9rem;">
+            If the form does not open your email client, email
+            <span data-email-user="info" data-email-domain="oncendayo.co.za"></span> directly.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
