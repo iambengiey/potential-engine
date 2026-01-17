@@ -1,0 +1,55 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const programs = [
+  {
+    title: "Social Welfare & HIV Support",
+    what: "Provide compassionate check-ins, welfare referrals, and practical relief for households managing health challenges.",
+    impact: "Families feel supported, connected to services, and better equipped for daily needs.",
+  },
+  {
+    title: "Youth Development",
+    what: "Offer mentorship, leadership development, and faith-rooted guidance for young people.",
+    impact: "Youth gain confidence, life skills, and positive pathways for the future.",
+  },
+  {
+    title: "Early Childhood Development (ECD)",
+    what: "Create nurturing early learning spaces and provide support to parents and caregivers.",
+    impact: "Children build strong foundations while caregivers feel informed and empowered.",
+  },
+  {
+    title: "Gender-Based Violence (GBV) Victim Support",
+    what: "Provide a safe listening space, referral pathways, and follow-up care for survivors.",
+    impact: "Survivors access support networks and regain stability with dignity.",
+  },
+  {
+    title: "Environmental Conservation",
+    what: "Organise clean-ups and community awareness initiatives to protect local environments.",
+    impact: "Neighborhoods become safer, cleaner, and more sustainable for families.",
+  },
+];
+---
+<BaseLayout
+  title="Programmes | ONCENDAYO: Help Has Come"
+  description="Explore ONCENDAYO's five programmes serving vulnerable families across Gauteng."
+>
+  <section class="section">
+    <div class="container">
+      <span class="badge">Programmes</span>
+      <h1>What we do</h1>
+      <p>
+        Our programme areas focus on restoring dignity, strengthening households, and supporting
+        vulnerable communities with practical care.
+      </p>
+      <div class="grid" style="margin-top:2rem;gap:2rem;">
+        {programs.map((program) => (
+          <div class="card">
+            <h2>{program.title}</h2>
+            <p><strong>What we do:</strong> {program.what}</p>
+            <p><strong>Intended impact:</strong> {program.impact}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
