@@ -1,6 +1,6 @@
-# ONCENDAYO: Help Has Come
+# Oncendayo: Help Has Come
 
-A production-ready Astro static site for the South African non-profit ONCENDAYO: Help Has Come, focused on community-driven support across Gauteng Province.
+A production-ready Astro static site for the South African non-profit Oncendayo: Help Has Come, focused on community-driven support across Gauteng Province.
 
 ## Project overview
 - Astro static site (no SSR) optimized for GitHub Pages.
