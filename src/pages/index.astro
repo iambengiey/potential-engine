@@ -1,0 +1,67 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Hero from "../components/Hero.astro";
+import ProgramCard from "../components/ProgramCard.astro";
+import ImpactStats from "../components/ImpactStats.astro";
+import CTA from "../components/CTA.astro";
+
+const programs = [
+  {
+    title: "Social Welfare & HIV Support",
+    description: "Compassionate care, referrals, and consistent follow-up for vulnerable families.",
+  },
+  {
+    title: "Youth Development",
+    description: "Mentorship, life skills, and faith-rooted guidance to help young people thrive.",
+  },
+  {
+    title: "Early Childhood Development (ECD)",
+    description: "Safe early learning spaces and support for caregivers in the foundation years.",
+  },
+  {
+    title: "Gender-Based Violence (GBV) Victim Support",
+    description: "Crisis response, listening support, and referrals to trusted partners.",
+  },
+  {
+    title: "Environmental Conservation",
+    description: "Community clean-ups and awareness to protect and restore local spaces.",
+  },
+];
+---
+<BaseLayout
+  title="Oncendayo: Help Has Come | Community Care"
+  description="Faith-rooted community support bringing hope, dignity, and practical help to families in Gauteng."
+>
+  <Hero />
+
+  <section class="section">
+    <div class="container">
+      <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1rem;">
+        <div>
+          <span class="badge">Programmes</span>
+          <h2>Community-led programmes</h2>
+          <p>Five focus areas delivering practical support and long-term restoration.</p>
+        </div>
+      </div>
+      <div class="grid grid-3" style="margin-top:2rem;">
+        {programs.map((program) => (
+          <ProgramCard title={program.title} description={program.description} />
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container">
+      <span class="badge">Impact</span>
+      <h2>Measured progress</h2>
+      <p>We stay honest about what has been achieved with available resources.</p>
+      <ImpactStats />
+    </div>
+  </section>
+
+  <CTA
+    title="Stand with Oncendayo"
+    description="Your time, resources, or partnership helps us reach more families with dignity and care."
+  />
+</BaseLayout>
