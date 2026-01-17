@@ -1,0 +1,83 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+const base = import.meta.env.BASE_URL;
+---
+<BaseLayout
+  title="Get Involved | ONCENDAYO: Help Has Come"
+  description="Volunteer, partner, or donate to support ONCENDAYO's community programmes."
+>
+  <section class="section">
+    <div class="container">
+      <span class="badge">Get Involved</span>
+      <h1>Join the work of hope</h1>
+      <p>
+        Whether you volunteer time, partner as an organisation, or offer financial support, your
+        involvement helps us restore dignity across Gauteng.
+      </p>
+      <div class="grid grid-3" style="margin-top:2rem;">
+        <div class="card">
+          <h2>Volunteer</h2>
+          <p>Serve with us at community drives, outreach events, and youth activities.</p>
+        </div>
+        <div class="card">
+          <h2>Partner</h2>
+          <p>Collaborate with ONCENDAYO to expand our community reach and impact.</p>
+        </div>
+        <div class="card">
+          <h2>Donate</h2>
+          <p>
+            Donations help fund food parcels, programme materials, and essential support. Payment
+            options are coordinated directly with our team.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-soft">
+    <div class="container grid grid-2">
+      <div>
+        <h2>Tell us how you would like to help</h2>
+        <p>
+          Complete the form below or use the mailto link if your device does not support form
+          submissions.
+        </p>
+        <div class="notice">
+          <p style="margin:0;">
+            Mailto fallback:
+            <a href="mailto:naolindii@icloud.com?subject=Get%20Involved%20with%20ONCENDAYO">Email Naomi</a>
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <form action="mailto:naolindii@icloud.com" method="post" enctype="text/plain">
+          <div>
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" required />
+          </div>
+          <div>
+            <label for="email">Email address</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+          <div>
+            <label for="interest">I would like to</label>
+            <select id="interest" name="interest" required>
+              <option value="Volunteer">Volunteer</option>
+              <option value="Partner">Partner</option>
+              <option value="Donate">Donate</option>
+            </select>
+          </div>
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Share how you'd like to help."></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Send message</button>
+          <p style="font-size:0.9rem;">
+            Prefer to email? Write to
+            <a href="mailto:dvinequeen@gmail.com">dvinequeen@gmail.com</a>.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
