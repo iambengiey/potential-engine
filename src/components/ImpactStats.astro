@@ -1,0 +1,16 @@
+---
+const stats = [
+  { value: "3", label: "Projects Done" },
+  { value: "150", label: "Families Reached" },
+  { value: "5", label: "Donations" },
+  { value: "98%", label: "Targets Achieved" },
+];
+---
+<div class="stats">
+  {stats.map((stat) => (
+    <div class="stat-card">
+      <h3 style="margin:0;font-size:1.8rem;color:var(--color-primary-teal);">{stat.value}</h3>
+      <p style="margin:0;">{stat.label}</p>
+    </div>
+  ))}
+</div>
