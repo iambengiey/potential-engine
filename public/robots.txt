@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://iambengiey.github.io/potential-engine/sitemap.xml

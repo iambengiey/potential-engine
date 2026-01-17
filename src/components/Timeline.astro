@@ -1,0 +1,28 @@
+---
+const items = [
+  {
+    year: "2022",
+    title: "Blanket Drive + Food Drive",
+    description: "Assisted 50+ families with warm essentials and food relief.",
+  },
+  {
+    year: "2023",
+    title: "Food Drive in Tembisa",
+    description: "Assisted 20 families with nutritious food parcels.",
+  },
+  {
+    year: "2024",
+    title: "Funding pause",
+    description: "No initiatives due to lack of funding and sponsorship support.",
+  },
+];
+---
+<div class="timeline">
+  {items.map((item) => (
+    <div class="timeline-item">
+      <h3 style="margin:0;">{item.year}</h3>
+      <p style="margin:0.5rem 0;font-weight:600;">{item.title}</p>
+      <p style="margin:0;">{item.description}</p>
+    </div>
+  ))}
+</div>
